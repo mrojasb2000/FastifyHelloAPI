@@ -48,6 +48,13 @@ server.put("/book/:id", (request, reply)=> {
     })
 })
 
+server.delete("/book/:id", (request, reply) => {
+    const id = request.params.id
+    reply.send({
+        message: "Book deleted",
+    })
+})
+
 
 server.listen(3000, function(error) {
     if (error) {
