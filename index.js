@@ -29,6 +29,15 @@ server.get("/book/:id", (request, reply) => {
     })
 })
 
+server.post("/book", (request, reply) => {
+    const name = request.body.name
+    const author = request.body.author
+    console.log(`Book name: ${name}, author: ${author}`)
+    reply.send({
+        message: "New book created",
+    })
+})
+
 
 server.listen(3000, function(error) {
     if (error) {
