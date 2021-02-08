@@ -1,0 +1,14 @@
+```sh
+nvm install node               ## Install latest NodeJS
+node --version > .nvmrc        ## Set the node version to use
+yarn init -y                   ## Project initialization
+yarn set version berry         ## Use yarn v2
+yarn add --dev typescript      ## TypeScript all the way
+yarn add --dev ts-node         ## Easier Ts script or task execution
+yarn plugin import typescript  ## Magic?
+yarn add --dev @types/node     ## Node types
+yarn add --dev @yarnpkg/pnpify ## Emulate ./node_modules
+yarn pnpify --sdk vscode       ## Setup workspace/environment     
+yarn tsc --init -t ES2020      ## Generate tsconfig.json
+yarn add fastify               ## Add fastify dep
+```
