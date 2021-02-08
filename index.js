@@ -38,6 +38,16 @@ server.post("/book", (request, reply) => {
     })
 })
 
+server.put("/book/:id", (request, reply)=> {
+    const id = request.params.id
+    const name = request.body.name
+    const author = request.body.author
+    console.log(`${author} writed the ${name} book`)
+    reply.send({
+        message: "Book updated",
+    })
+})
+
 
 server.listen(3000, function(error) {
     if (error) {
